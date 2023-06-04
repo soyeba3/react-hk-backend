@@ -2,8 +2,10 @@ const User = require("../models/User");
 
 //Get all users
 const allUsers = async (req, res, next) => {
+  console.log("hello");
   try {
     const users = await User.find();
+    console.log(users);
     res.status(200).send(users);
   } catch (error) {
     return next(error);
