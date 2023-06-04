@@ -9,6 +9,7 @@ app.use(cors());
 
 const connect = () => {
   try {
+    mongoose.set("strictQuery", true);
     mongoose.connect(
       `mongodb+srv://hk_project:x0TCQSkVfitcFOjj@cluster0.uwl9z.mongodb.net/hk_project?retryWrites=true&w=majority`
     );
